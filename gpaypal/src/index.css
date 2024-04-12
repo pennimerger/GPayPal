@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&family=Oswald:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: "Mutka", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.btn-blue {
+  background-color: #0171ba;
+  @apply py-3 px-8 rounded-full shadow text-white w-full hover:bg-blue-700 transition-all duration-200 sm:w-auto sm:px-20;
+}
+
+h1.heading {
+  font-family: "Oswald", sans-serif;
+  font-style: italic;
+  color: #fff;
+  @apply text-4xl lg:text-5xl;
+}
+
+.hero {
+  height: 500px;
+  background: url("./assets/homepage/hero-banner.jpg") no-repeat right/cover;
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    background: url("./assets/homepage/hero-banner.jpg") no-repeat right/cover;
+  }
+}
