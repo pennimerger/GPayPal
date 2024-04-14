@@ -1,12 +1,15 @@
 import React, { useState } from "react"
 import { getImageUrl } from "../../../utils/image-util.jsx"
 
-const buyers1 = getImageUrl('buyonline_browser1.png');
-const buyers2 = getImageUrl('buyonline_browser2.png');
-const buyers3 = getImageUrl('buyonline_browser3.png');
+const buyers1 = getImageUrl('homepage/buyonline_browser1.png');
+const buyers2 = getImageUrl('homepage/buyonline_browser2.png');
+const buyers3 = getImageUrl('homepage/buyonline_browser3.png');
+const sellers1 = getImageUrl('homepage/For_Sellers_1.png');
+const sellers2 = getImageUrl('homepage/For_Sellers_2.png');
+const sellers3 = getImageUrl('homepage/For_Sellers_3.png');
 
 function Section4() {
-  const [value, setValue] = useState(true)
+  const [value, setValue] = useState(false)
 
   return (
     <>
@@ -15,10 +18,12 @@ function Section4() {
 
         <ul className="flex items-center justify-center">
           <li>
-            <button className="py-2 px-8">For buyers</button>
+            <button onClick={() => setValue(true)} className={`py-2 px-8 hover:text-blue-400 transition-all duration-150 ${value && "text-blue-600 font-bold border-b-2 border-blue-600"
+              }`}>For buyers</button>
           </li>
           <li>
-            <button className="py-2 px-8">For sellers</button>
+            <button onClick={() => setValue(false)} className={`py-2 px-8 hover:text-blue-400 transition-all duration-150 ${!value && "text-blue-600 font-bold border-b-2 border-blue-600"
+              }`}>For sellers</button>
           </li>
         </ul>
 
@@ -32,34 +37,62 @@ function Section4() {
 
 function Buyers() {
   return <>
-    <div className="flex flex-col">
+    <div className="flex flex-col flex-wrap gap-8 sm:grid sm:grid-cols-2 md:grid-cols-3 mt-10">
       <article>
         <img src={buyers1} alt="" className="mx-auto" />
-        <p>
-          <span className="py-3 px-6 inline-block mr-4 rounded-full border border-slate-500">1</span>
+        <p className="flex items-start mt-4">
+          <span className="py-3 px-6 block mr-4 rounded-full border border-slate-500">1</span>
           Sign up with just an email address and password.
         </p>
       </article>
       <article>
         <img src={buyers2} alt="" className="mx-auto" />
-        <p>
-          <span className="py-3 px-6 inline-block mr-4 rounded-full border border-slate-500">2</span>
+        <p className="flex items-start mt-4">
+          <span className="py-3 px-6 block mr-4 rounded-full border border-slate-500">2</span>
           Securely add your cards.
         </p>
       </article>
       <article>
         <img src={buyers3} alt="" className="mx-auto" />
-        <p>
-          <span className="py-3 px-6 inline-block mr-4 rounded-full border border-slate-500">3</span>
+        <p className="flex items-start mt-4">
+          <span className="py-3 px-6 block mr-4 rounded-full border border-slate-500">3</span>
           Use the PayPal button to check out with just an email address and password.
         </p>
       </article>
     </div>
+
+    <button className="border border-blue-600 text-base py-3 px-40 rounded-full font-bold text-blue-600 block mx-auto mt-10">Learn More</button>
   </>
 }
 
 function Sellers() {
-  return <>Sell</>;
+  return <>
+    <div className="flex flex-col flex-wrap gap-8 sm:grid sm:grid-cols-2 md:grid-cols-3 mt-10">
+      <article>
+        <img src={sellers1} alt="" className="mx-auto" />
+        <p className="flex items-start mt-4">
+          <span className="py-3 px-6 block mr-4 rounded-full border border-slate-500">1</span>
+          Set up a business account
+        </p>
+      </article>
+      <article>
+        <img src={sellers2} alt="" className="mx-auto" />
+        <p className="flex items-start mt-4">
+          <span className="py-3 px-6 block mr-4 rounded-full border border-slate-500">2</span>
+          Choose the features you want to start with.You can go back, change or add them later.
+        </p>
+      </article>
+      <article>
+        <img src={sellers3} alt="" className="mx-auto" />
+        <p className="flex items-start mt-4">
+          <span className="py-3 px-6 block mr-4 rounded-full border border-slate-500">3</span>
+          Integrate PayPal via a partner, a developer or by yourself.
+        </p>
+      </article>
+    </div>
+
+    <button className="border border-blue-600 text-base py-3 px-40 rounded-full font-bold text-blue-600 block mx-auto mt-10">Learn More</button>
+  </>;
 }
 
 export default Section4

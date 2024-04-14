@@ -1,6 +1,7 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Homepage, AcceptOnlinePayments, Error, Freelancers, GetPaid, Login, Merchant, MobileApps, PartnersAndDevelopers, PayOnline, Personal, SendInvoice, SendPayments, Shopping, SignUp } from './pages'
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/sign-up" element={<SignUp />}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )
