@@ -55,6 +55,48 @@ h1.heading {
   justify-content: center;
 }
 
+.active {
+  @apply text-blue-600 font-bold border-blue-600;
+}
+
+.payonline-hero {
+  height: 600px;
+  background: url("./assets/payonline/buy_onwebsites_hero_bg_1x.jpg") no-repeat center/cover;
+}
+
+.payonline-hero .overlay {
+  height: 600px;
+}
+
+.imagegrid-hero {
+  height: 500px;
+  background: url("./assets/payonline/buy_onwebsites_n1_1x.jpg") no-repeat center/cover;
+}
+
+.imagegrid-hero .overlay {
+  height: 500px;
+}
+
+.imagegrid-hero-two {
+  background: url("./assets/payonline/buy_onwebsites_n4_1x.jpg") no-repeat center/cover;
+}
+
+.sendpayments-hero {
+  background: url("./assets/sendpayments/send_hero_bg_1x.jpg") no-repeat center/cover;
+}
+
+.sendgrid-hero {
+  background: url("./assets/sendpayments/send_n1_1x.jpg") no-repeat center/cover;
+}
+
+.mobile-apps {
+  background: linear-gradient(90deg, #018cd2, #014798);
+}
+
+.text-color {
+  color: #018cd2;
+}
+
 @media (min-width: 1440px) {
   .hero {
     background: url("./assets/homepage/hero-banner.jpg") no-repeat right/cover;
