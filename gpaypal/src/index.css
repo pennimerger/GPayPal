@@ -11,6 +11,7 @@ body {
 
 * {
   font-family: "Mutka", sans-serif;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -24,6 +25,26 @@ p {
 .btn-blue {
   background-color: #0171ba;
   @apply py-3 px-8 rounded-full shadow text-white w-full hover:bg-blue-700 transition-all duration-200 sm:w-auto sm:px-20;
+}
+
+.navbar {
+  position: fixed;
+  left: -100vw;
+  @apply transition-all duration-200 text-white w-full top-0 p-8;
+}
+
+.navbar.open {
+  left: 0;
+  background: radial-gradient(#018dd199, #003d9099);
+  @apply top-0 left-0 right-0 bottom-0 z-50;
+}
+
+.navbar ul li a {
+  @apply text-sm;
+}
+
+.links {
+  display: block;
 }
 
 h1.heading {
@@ -93,8 +114,36 @@ h1.heading {
   background: linear-gradient(90deg, #018cd2, #014798);
 }
 
-.text-color {
-  color: #018cd2;
+.merchant-hero {
+  background: url("./assets/merchant/merchant_herobanner.jpg") no-repeat center/cover;
+}
+
+.merchant-hero-two {
+  background: url("./assets/merchant/merchant-freelancers.jpg") no-repeat center/cover;
+}
+
+.merchant-hero .overlay {
+  height: 600px;
+}
+
+.onlinepayments-hero {
+  background: url("./assets/onlinepayments/hero.jpg") no-repeat center/cover;
+}
+
+.zebra ul li:nth-child(odd) {
+  @apply bg-slate-100;
+}
+
+.convert-hero {
+  background: url("./assets/invoices/shutterstock-editorial.jpg") no-repeat center/cover;
+}
+
+.freelancers-hero {
+  background: url("./assets/freelancers/hero-banner-freelancers-ke.jpg") no-repeat center/cover;
+}
+
+.partners-hero {
+  background: url("./assets/partners/Partner-Developers-Page_Website-hero.jpg") no-repeat center/cover;
 }
 
 @media (min-width: 1440px) {

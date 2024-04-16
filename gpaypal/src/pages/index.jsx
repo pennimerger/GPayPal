@@ -13,5 +13,7 @@ import SendInvoice from "./SendInvoice.jsx";
 import SendPayments from "./SendPayments.jsx";
 import Shopping from "./Shopping.jsx";
 import SignUp from "./SignUp.jsx";
+import PersonalAccount from "./components/signup/PersonalAccount";
+import BusinessAccount from "./components/signup/BusinessAccount";
 
-export { Homepage, AcceptOnlinePayments, Error, Freelancers, GetPaid, Login, Merchant, MobileApps, PartnersAndDevelopers, PayOnline, Personal, SendInvoice, SendPayments, Shopping, SignUp }
+export { Homepage, AcceptOnlinePayments, Error, Freelancers, GetPaid, Login, Merchant, MobileApps, PartnersAndDevelopers, PayOnline, Personal, SendInvoice, SendPayments, Shopping, SignUp, PersonalAccount, BusinessAccount, }

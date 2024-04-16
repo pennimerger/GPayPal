@@ -78,8 +78,46 @@ const section2 = [
   }
 ];
 
+const howItWorks = [
+  {
+    desc: "You create an invoice and send it to your customer.",
+    image: "invoices/step-1.png",
+  },
+  {
+    desc: "Your customer receives the email invoice and clicks on the PayPal checkout button.",
+    image: "invoices/step-2.png",
+  },
+  {
+    desc: "By clicking, they’re sent to the PayPal website where they can review and print the invoice details.",
+    image: "invoices/step-3.png",
+  },
+  {
+    desc: "They choose to pay the full amount, complete the transaction and receive confirmation of payment.",
+    image: "invoices/step-4.png",
+  },
+];
+
+const payments = [
+  {
+    desc: "Your customers visit your website and choose their items.",
+    image: "onlinepayments/screen1.png",
+  },
+  {
+    desc: "They log in to their PayPal accounts.",
+    image: "onlinepayments/screen2.png",
+  },
+  {
+    desc: "They confirm their purchases.",
+    image: "onlinepayments/screen3.png",
+  },
+  {
+    desc: "That’s all!!",
+    image: "onlinepayments/screen4.png",
+  },
+]
+
 const getProducts = () => {
   return section2;
 }
 
-export { getProducts };
+export { getProducts, payments, howItWorks };
